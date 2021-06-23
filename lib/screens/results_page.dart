@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
+import '../screens/resume.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -59,6 +60,13 @@ class ResultsPage extends StatelessWidget {
             ),
           ),
           BottomButton(
+            buttonTitle: 'resume',
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> Resume() ));
+            },
+          ),
+          BottomButton(
             buttonTitle: 'RE-CALCULATE',
             onTap: () {
               Navigator.pop(context);
@@ -68,4 +76,6 @@ class ResultsPage extends StatelessWidget {
       ),
     );
   }
+
+
 }
